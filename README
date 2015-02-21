@@ -1,0 +1,21 @@
+
+This is an example solution to The Hut Group 2014 Recommendation Challenge (http://www.thehutchallenge.com)
+
+(Last updated 19/01/2015)
+
+Please feel free to use this solution as a starting point to improve upon or build your own entirely.
+We strongly encourage you to try different approaches for generating your recommendations - this solution is
+provided to give you some boilerplate code to enable you to focus on creating your algorithms.
+
+*** How To Use ***
+
+To run the scripts and generate the recommendations, first download the two data sets from the challenge website.
+Place these files (train.csv and customers_to_predict.csv) inside the 'given' directory. From the directory
+containing the makefile, invoke the command:
+
+make clean all
+
+This may take a minute or two to execute. Once it's finished, the file overall_output.csv will contain the
+final recommendations in the correct format to upload to the challenge website.
+
+Good luck and have fun!
