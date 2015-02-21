@@ -4,9 +4,9 @@ from collections import defaultdict
 import operator
 
 # Calculates which products are strongly paired, based on how often they were bought together in all customers' order
-# histories
+# histories.
 
-# Very similar to scripts/customer_purchases.py except we do not want to disregard order
+# Very similar to scripts/customer_to_products.py except we do not want to disregard order.
 customer_purchases = {}
 with open('data/product_customer.csv', 'rb') as f:
     for line in f:

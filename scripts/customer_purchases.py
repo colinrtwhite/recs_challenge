@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Builds up a file of customers, each followed by a list of products that they have purchased
-# Builds customer_products.csv from product_customer.csv
+# Builds customer_products.csv from product_customer.csv.
 
 customer_purchases = {}
 with open('data/product_customer.csv', 'rb') as f:

@@ -7,7 +7,7 @@ data/product_customer.csv: given/train.csv
 data/customer_bestseller_predictions.csv: data/most_popular_products.txt data/customer_products.csv
 	python scripts/generate_bestseller_predictions.py
 
-data/customer_paired_predictions.csv: data/customer_products.csv data/paired_products.csv given/product_consistency.json
+data/customer_paired_predictions.csv: given/product_consistency.json given/item_to_item_collaborative_similarity.json data/customer_products.csv
 	python scripts/generate_paired_predictions.py
 
 data/customer_products.csv: data/product_customer.csv

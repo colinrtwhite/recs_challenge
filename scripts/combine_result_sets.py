@@ -4,7 +4,7 @@ import operator
 import json
 
 # Combines the two sources of predictions to produce the overall output,
-# mainly using paired predictions and filling in gaps with best selling products
+# mainly using paired predictions and filling in gaps with best selling products.
 
 customers_to_predict = []
 with open('given/customers_to_predict.csv', 'rb') as f:
@@ -37,7 +37,7 @@ with open('overall_output.csv', 'w+') as f:
         if customer in paired_predictions:
             for product, pair_score in paired_predictions[customer].items():
                 if product not in customer_purchases[customer]:
-                    # Weight the paired product score with that product's consistency.
+                    # Weight the paired product1 score with that product1's consistency.
                     try:
                         final_predictions[product] += pair_score
                     except:

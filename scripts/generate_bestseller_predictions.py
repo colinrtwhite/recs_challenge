@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # Generates a set of 6 predictions for each customer based upon the most popular products overall,
-# (with products already purchased by each customer excluded)
+# (with products already purchased by each customer excluded).
 
 most_popular_products = []
 with open('data/most_popular_products.txt', 'rb') as f:
