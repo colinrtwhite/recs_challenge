@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c23f88d0-981e-41a3-a997-7ac4fca0781a" name="Default" comment="Use Adrian's similarity values instead of the frequency based product-pair values.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/calculate_similarity.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/product_attributes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Colin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Colin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/combine_result_sets.py" afterPath="$PROJECT_DIR$/scripts/combine_result_sets.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/customer_purchases.py" afterPath="$PROJECT_DIR$/scripts/customer_purchases.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/generate_bestseller_predictions.py" afterPath="$PROJECT_DIR$/scripts/generate_bestseller_predictions.py" />
+    <list default="true" id="c23f88d0-981e-41a3-a997-7ac4fca0781a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/normalise_product_consistency.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/generate_paired_predictions.py" afterPath="$PROJECT_DIR$/scripts/generate_paired_predictions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/makefile" afterPath="$PROJECT_DIR$/makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/product_pairs.py" afterPath="$PROJECT_DIR$/scripts/product_pairs.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="recs_challenge.iws" />
@@ -45,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate_paired_predictions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generate_paired_predictions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/generate_paired_predictions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12311901" vertical-offset="450" max-vertical-offset="1215">
-              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1305">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -57,11 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calculate_similarity.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="normalise_product_consistency.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/normalise_product_consistency.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calculate_similarity.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/calculate_similarity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1455">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.2872777" vertical-offset="0" max-vertical-offset="1455">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#18#29#0" expanded="true" />
               </folding>
@@ -98,6 +103,7 @@
         <option value="$PROJECT_DIR$/makefile" />
         <option value="$PROJECT_DIR$/scripts/calculate_similarity.py" />
         <option value="$PROJECT_DIR$/scripts/product_attributes.py" />
+        <option value="$PROJECT_DIR$/scripts/normalise_product_consistency.py" />
         <option value="$PROJECT_DIR$/scripts/generate_paired_predictions.py" />
       </list>
     </option>
@@ -333,12 +339,20 @@
       <option name="number" value="Default" />
       <updated>1424364190559</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add files to calculate similarity for all attributes.">
+      <created>1424558449786</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1424558449786</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="828" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -375,6 +389,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Add files to calculate similarity for all attributes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files to calculate similarity for all attributes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -524,22 +540,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/calculate_similarity.py">
+    <entry file="file://$PROJECT_DIR$/scripts/normalise_product_consistency.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1455">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
-            <element signature="e#18#29#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/generate_paired_predictions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12311901" vertical-offset="450" max-vertical-offset="1215">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1305">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding>
             <element signature="e#19#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/calculate_similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2872777" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#29#0" expanded="true" />
           </folding>
         </state>
       </provider>

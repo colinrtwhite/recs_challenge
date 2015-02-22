@@ -16,7 +16,7 @@ with open('data/customer_products.csv', 'rb') as f:
 with open('given/product_to_attributes.json', 'rb') as f:
     product_to_attributes = json.load(f)
 
-with open('given/item_to_item_collaborative_similarity.json', 'rb') as f:
+with open('given/product_similarity.json', 'rb') as f:
     product_similarity = json.load(f)
 
 with open('given/category_similarity.json', 'rb') as f:
@@ -31,14 +31,16 @@ with open('given/brand_similarity.json', 'rb') as f:
 with open('given/price_range_similarity.json', 'rb') as f:
     price_range_similarity = json.load(f)
 
-product_consistency = {}
-max_consistency = 0
-with open('given/product_consistency.json', 'rb') as f:
-    consistency_json = json.load(f)
-    for item in consistency_json:
-        product_consistency[item[0]] = log(item[1])
-        max_consistency = max(max_consistency, product_consistency[item[0]])
+with open('given/product_consistency_normalised.json', 'rb') as f:
+    product_consistency = json.load(f)
 
+# WEIGHTS (please keep them added up to 1.0)
+PRODUCT_WEIGHT = 0.45
+CATEGORY_WEIGHT = 0.1
+SUB_CATEGORY_WEIGHT = 0.1
+BRAND_WEIGHT = 0.1
+PRICE_RANGE_WEIGHT = 0.1
+PRODUCT_CONSISTENCY_WEIGHT = 0.15
 
 weighted_related_products_for_product = {}
 customer_paired_predictions = {}
@@ -52,10 +54,14 @@ for customer in customer_purchases:
                 product_attributes = product_to_attributes[product]
                 weighted_related_products = []
                 for related_product in product_similarity[product]:
-                    if related_product is not product:
-                        related_product_attributes = product_to_attributes[related_product]
-                        # MOST IMPORTANT LINE IN THIS WHOLE ALGORITHM: HOW AND WHAT WE WEIGHT
-                        weighted_related_products.append((related_product, product_similarity[product][related_product]))
+                    related_product_attributes = product_to_attributes[related_product]
+                    # MOST IMPORTANT LINE IN THIS WHOLE ALGORITHM: HOW AND WHAT WE WEIGHT
+                    weighted_related_products.append((related_product, PRODUCT_WEIGHT * product_similarity[product][related_product] +
+                                                      CATEGORY_WEIGHT * category_similarity[product_attributes['category']][related_product_attributes['category']] +
+                                                      SUB_CATEGORY_WEIGHT * sub_category_similarity[product_attributes['sub_category']][related_product_attributes['sub_category']] +
+                                                      BRAND_WEIGHT * brand_similarity[product_attributes['brand']][related_product_attributes['brand']] +
+                                                      PRICE_RANGE_WEIGHT * price_range_similarity[product_attributes['price_range']][related_product_attributes['price_range']] +
+                                                      PRODUCT_CONSISTENCY_WEIGHT * product_consistency[related_product]))
 
                 weighted_related_products_for_product[product] = weighted_related_products
 
